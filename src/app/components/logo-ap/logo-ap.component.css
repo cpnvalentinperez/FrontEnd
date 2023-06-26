@@ -1,0 +1,38 @@
+#logoAP{
+    width: 100%;
+    /* height: 100px; */
+    /* padding: 10px; */
+    
+}
+img{
+    width: 35px
+   
+}
+i{
+    font-size: 25px;
+    padding: 10px; 
+    color: #3b5998;
+}
+.container{
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    border-width: medium;
+    padding: 15px; 
+}
+
+/* Para el celu*/
+@media(max-width: 575px){
+    .container{
+        flex-direction: column;
+    }
+
+    .redes{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}

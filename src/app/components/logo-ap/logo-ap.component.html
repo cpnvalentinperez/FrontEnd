@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="container">
+        <div class="logo">
+            <img src="../../../assets/logoAP.png" id="logoAP">
+        </div>
+        
+        <div class="redes">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-google"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <button type="button" class="btn btn-primary" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+            <button type="button" class="btn btn-danger" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesion</button>
+
+        </div>
+        
+    </div>
+</div>
+
+
