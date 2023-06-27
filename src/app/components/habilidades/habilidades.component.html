@@ -1,126 +1,40 @@
 <div class="row">
-    <h1>HabilidadeS</h1>
+    <h1>Habilidades</h1>
     <div class="col-lg-2">
         <button type="button" routerLink="/newskill" class="btn btn-dark"  *ngIf="isLogged">Nueva Habilidad</button>
     </div>
-   <!-- <div class="text-center col-sm4- col-md-4 col-lg-4">
-    <circle-progress
-        [percent]="100"
-        [radius]="100"
-        [imageSrc]="''"
-        [showImage]="false"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="10"
-        [title]="'HTML'"
-        [titleFontSize]="'25px'"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeColor]="'green'"
-        [innerStrokeColor]="'pink'"
-        [animation]="true"
-        [animationDuration]="800">
-    </circle-progress>
-   </div>
-   <div class="text-center col-sm4- col-md-4 col-lg-4">
-    <circle-progress
-        [percent]="75"
-        [radius]="100"
-        [imageSrc]="''"
-        [showImage]="false"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="10"
-        [title]="'CSS'"
-        [titleFontSize]="'25px'"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeColor]="'green'"
-        [innerStrokeColor]="'pink'"
-        [animation]="true"
-        [animationDuration]="800">
-    </circle-progress>
-   </div>
-   <div class="text-center col-sm4- col-md-4 col-lg-4">
-    <circle-progress
-        [percent]="80"
-        [radius]="100"
-        [imageSrc]="''"
-        [showImage]="false"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="10"
-        [title]="'JS'"
-        [titleFontSize]="'25px'"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeColor]="'green'"
-        [innerStrokeColor]="'pink'"
-        [animation]="true"
-        [animationDuration]="800">
-    </circle-progress>
-   </div>
-   <div class="text-center col-sm4- col-md-4 col-lg-4">
-    <circle-progress
-        [percent]="100"
-        [radius]="100"
-        [imageSrc]="''"
-        [showImage]="false"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="10"
-        [title]="'GITHUB'"
-        [titleFontSize]="'25px'"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeColor]="'green'"
-        [innerStrokeColor]="'pink'"
-        [animation]="true"
-        [animationDuration]="800">
-    </circle-progress>
-   </div>
-   <div class="text-center col-sm4- col-md-4 col-lg-4">
-    <circle-progress
-        [percent]="50"
-        [radius]="100"
-        [imageSrc]="''"
-        [showImage]="false"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="10"
-        [title]="'JPA'"
-        [titleFontSize]="'25px'"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeColor]="'green'"
-        [innerStrokeColor]="'pink'"
-        [animation]="true"
-        [animationDuration]="800">
-    </circle-progress>
-   </div> -->
-   <div class="text-center col-sm4- col-md-4 col-lg-4" *ngFor="let skill of skill">
-    <circle-progress
-        [percent]="(skill.porcentaje)"
-        [radius]="90"
-        [imageSrc]="''"
-        [title]="(skill.nombre)"        
-        [showImage]="false"
-        [outerStrokeWidth]="10"
-        [innerStrokeWidth]="10"        
-        [titleFontSize]="'25px'"
-        [showUnits]="false"
-        [showSubtitle]="false"
-        [outerStrokeColor]="'green'"
-        [innerStrokeColor]="'pink'"
-        [animation]="true"
-        [animationDuration]="800">
-    </circle-progress>
 
-    <td *ngIf="isLogged">
-        <button class="btn btn-info" routerLink="/edithys/{{skill.id}}">
-    <i class="bi bi-pencil-square">
-     EDITAR</i></button>
-    </td>
-       
-    <td *ngIf="isLogged">
-        <button class="btn btn-danger" (click)="delete(skill.id)">
+    <div class="row">
+    <!-- <div class="col-12 d-flex justify-content-between"> 
+    <div class="col-sm-4 col-md-4 col-lg-4" *ngFor="let skill of skill">-->
+        <ng-container *ngFor="let skill of skill">
+            <div class="col-4">
+            <circle-progress
+            [percent]="(skill.porcentaje)"
+            [radius]="90"
+            [imageSrc]="''"
+            [title]="(skill.nombre)"        
+            [showImage]="false"
+            [outerStrokeWidth]="10"
+            [innerStrokeWidth]="10"        
+            [titleFontSize]="'25px'"
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [outerStrokeColor]="'green'"
+            [innerStrokeColor]="'blue'"
+            [animation]="true"
+            [animationDuration]="800">
+            </circle-progress>
+
+        <div class="button-container" *ngIf="isLogged">
+
+            <button class="btn btn-info" routerLink="/edithys/{{skill.id}}">
+                <i class="bi bi-pencil-square"></i></button>
            
-        <i class="bi bi-trash">BORRAR</i></button>
-    </td>
+            <button class="btn btn-danger" (click)="delete(skill.id)">
+                <i class="bi bi-trash"></i></button>
+            </div> 
+        </div>  
+     </ng-container> 
    </div>
 </div>
