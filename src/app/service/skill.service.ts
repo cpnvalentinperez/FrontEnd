@@ -9,7 +9,7 @@ import { Skill } from '../model/skill';
 })
 export class SkillService {
   
-  URL = 'https://backendvp-8k3s.onrender.com/skill';
+  URL = 'https://backendvp-8k3s.onrender.com/skill/';
   
   //URL = environment.URL + '/skill/';
 
