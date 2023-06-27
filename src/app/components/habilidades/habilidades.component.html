@@ -96,14 +96,12 @@
    <div class="text-center col-sm4- col-md-4 col-lg-4" *ngFor="let skill of skill">
     <circle-progress
         [percent]="(skill.porcentaje)"
-        [radius]="100"
+        [radius]="90"
         [imageSrc]="''"
-        [title]="(skill.nombre)"
-        
+        [title]="(skill.nombre)"        
         [showImage]="false"
         [outerStrokeWidth]="10"
-        [innerStrokeWidth]="10"
-        [title]="'DATABASE'"
+        [innerStrokeWidth]="10"        
         [titleFontSize]="'25px'"
         [showUnits]="false"
         [showSubtitle]="false"
