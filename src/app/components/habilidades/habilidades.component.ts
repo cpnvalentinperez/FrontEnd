@@ -26,8 +26,12 @@ export class HabilidadesComponent {
   }
 
   cargarSkills():void{
-    this.skillS.lista().subscribe(data => {this.skill = data});    
-  }
+    this.skillS.lista().subscribe
+    (data => 
+      {this.skill = data;
+      }
+     )
+   }
 
   delete(id?: number){
     if(id != undefined){
