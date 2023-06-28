@@ -10,4 +10,5 @@ footer{
     flex-direction: column;
     text-align: center;
     box-shadow: 2px -2px 5px rgb(129, 129, 129);
+    background-color: #c0d6ec;
 }
