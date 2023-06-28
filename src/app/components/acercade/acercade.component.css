@@ -29,13 +29,16 @@ div{
 #fotoperfil{
     max-width: 20%;
     height: auto;
-    display:block;
-    position: absolute;
+    display:block;    
     margin: 0 auto;
     border-radius: 100%;
-    box-shadow: 3px 3px 3px black;
-    left: 5%;
-    top: 410px;
+    box-shadow: 3px 3px 3px black;    
+    }
+
+    .descripcion{
+        display:flex;
+        justify-content: center;
+        align-items: center;   
     }
 }
 

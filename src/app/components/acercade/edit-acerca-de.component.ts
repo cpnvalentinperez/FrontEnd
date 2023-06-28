@@ -32,11 +32,12 @@ export class EditAcercaDeComponent implements OnInit {
 
    onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
+    this.persona.img = this.imageService.url
     this.personaService.update(id, this.persona).subscribe(
       data => {
         this.router.navigate(['']);        
       }, err =>{
-        alert("Erro al cambiar imagen");
+        alert("Error al cambiar imagen");
         this.router.navigate(['']);
       })
    }

@@ -1,7 +1,7 @@
-<div class ="row">
+<div class ="row" *ngIf="isLogged">
     <h1>Experiencia Laboral</h1>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" >
             Nueva Experiencia
         </button>
     </div>
