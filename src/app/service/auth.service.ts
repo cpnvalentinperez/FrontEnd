@@ -12,7 +12,7 @@ export class AuthService {
   
   authURL = 'https://backendvp-8k3s.onrender.com/auth/';
   
-//authURL = 'http://localhost:8880/auth/'
+//authURL = 'http://localhost:8080/auth/'
 
 constructor(private httpClient: HttpClient) { }
 
