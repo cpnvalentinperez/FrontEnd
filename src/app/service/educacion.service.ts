@@ -9,9 +9,9 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
 
-  //URL = 'https://backendvp-8k3s.onrender.com/educacion/';
+  URL = 'https://backendvp-8k3s.onrender.com/educacion/';
 
-  URL = environment.URL + 'educacion/';
+  //URL = environment.URL + 'educacion/';
 
   constructor(private httpClient: HttpClient) { }
 
