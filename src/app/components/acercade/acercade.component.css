@@ -28,12 +28,12 @@ div{
 
 @media (min-width: 576px){
 #fotoperfil{
-    max-width: 20%;
-    height: auto;
-    display:block;    
-    margin: 0 auto;
-    border-radius: 100%;
-    box-shadow: 3px 3px 3px black;    
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px grey;
+        left: 3%;
+        top:500px;   
     }
 
     .descripcion{
@@ -45,7 +45,7 @@ div{
 
 @media (max-width: 575px){
     #fotoperfil{
-        width: 25%;
+        width: 100%;
         position: absolute;
         border-radius: 100%;
         box-shadow: 3px 3px 3px black;

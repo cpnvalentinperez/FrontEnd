@@ -9,9 +9,9 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
   
-  expURL = 'https://backendvp-8k3s.onrender.com/explab/';
+  //expURL = 'https://backendvp-8k3s.onrender.com/explab/';
   
-  //expURL = environment.URL + 'explab/';
+  expURL = environment.URL + 'explab/';
 
   constructor(private httpClient: HttpClient) { }
 

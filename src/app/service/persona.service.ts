@@ -9,9 +9,9 @@ import { persona } from '../model/persona.model';
 })
 export class PersonaService {
   
-URL = 'https://backendvp-8k3s.onrender.com/personas/';
+//URL = 'https://backendvp-8k3s.onrender.com/personas/';
 
-//  URL = environment.URL + 'personas/';
+  URL = environment.URL + 'personas/';
 
   constructor(private httpClient: HttpClient) { }
 
