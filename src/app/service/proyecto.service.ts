@@ -9,7 +9,7 @@ import { Proyecto } from '../model/proyecto';
 })
 export class ProyectoService {
 
-  //URL = 'https://backendvp-8k3s.onrender.com/proyecto/';
+ //URL = 'https://portfolio-backend-rvh4.onrender.com/proyecto/';
   
   URL = environment.URL + 'proyecto/';
 

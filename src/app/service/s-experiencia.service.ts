@@ -9,7 +9,7 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
   
-  //expURL = 'https://backendvp-8k3s.onrender.com/explab/';
+ // expURL = 'https://portfolio-backend-rvh4.onrender.com/explab/';
   
   expURL = environment.URL + 'explab/';
 

@@ -9,7 +9,7 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
 
-  //URL = 'https://backendvp-8k3s.onrender.com/educacion/';
+  //URL = 'https://portfolio-backend-rvh4.onrender.com/educacion/';
 
   URL = environment.URL + 'educacion/';
 
