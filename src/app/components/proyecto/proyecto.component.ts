@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/model/proyecto';
 import { ProyectoService } from 'src/app/service/proyecto.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -8,7 +8,7 @@ import { TokenService } from 'src/app/service/token.service';
   templateUrl: './proyecto.component.html',
   styleUrls: ['./proyecto.component.css']
 })
-export class ProyectoComponent {
+export class ProyectoComponent implements OnInit {
   
   proyecto: Proyecto [] =  []; 
 
@@ -26,8 +26,19 @@ export class ProyectoComponent {
     }
   
   }
-
   cargarProyecto():void{
     this.proyectoService.lista().subscribe(data => {this.proyecto = data});    
+  }
+
+  delete(id?: number){
+    if(id != undefined){
+      this.proyectoService.delete(id).subscribe(
+        data => {
+          this.cargarProyecto();
+        }, err => {
+          alert("No se puede borrar");
+        }
+        )
+    }
   }
 }

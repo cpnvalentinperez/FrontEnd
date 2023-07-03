@@ -1,18 +1,14 @@
 export class Proyecto {
 
     id?: number;
-    imgProjecto: String;
-    nameProjecto: String;
-    descriptionProjecto: String;
-    linkProjecto: String;
+    nombreE: String;
+    descripcionE: String;
+    
 
-    constructor(imgProjecto: String, nameProjecto: String, descriptionProjecto: String, linkProjecto: String) {
+    constructor(nombreE: String, descripcionE: String) {
 
-        this.imgProjecto = imgProjecto;
-        this.nameProjecto = nameProjecto;
-        this.descriptionProjecto = descriptionProjecto;
-        this.linkProjecto = linkProjecto;
-
+        this.nombreE = nombreE;
+        this.descripcionE = descripcionE;
     }
 
 }

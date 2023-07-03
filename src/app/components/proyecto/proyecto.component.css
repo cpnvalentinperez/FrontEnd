@@ -1,16 +1,9 @@
 .row{
     padding: 20px;
+}
+div{
     background-color: #c0d6ec;
 }
-.contenedor{
-    width:auto;
-}
-.parte1,.parte2{
-    display:inline-block;
-    text-align: justify;
-}
-
-.img-trabajo {
-    box-shadow: 10px 10px 30px black;
-    box-shadow: ejex ejey difumasion color;
+h1,h3 {
+    display: inline;
 }
