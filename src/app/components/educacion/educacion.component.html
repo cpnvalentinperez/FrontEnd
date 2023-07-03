@@ -1,4 +1,4 @@
-<div class ="row">
+<div class ="row" *ngIf="isLogged">
     <h1>Educación</h1>
     <div class="col-lg-2">
         <button type="button" class="btn btn-dark" routerLink="/nuevaedu" >
@@ -13,7 +13,7 @@
             <tr *ngFor="let Educacion of educacion">
                 <td><h2>{{Educacion.nombreE}}</h2></td>     
                 <td>{{Educacion.descripcionE}}</td>
-                <td *ngIf="isLogged">
+                <td >
                     <button class="btn btn-info" routerLink="/editedu/{{Educacion.id}}">
                          <i class="bi bi-pencil-square">
                     </i></button>
