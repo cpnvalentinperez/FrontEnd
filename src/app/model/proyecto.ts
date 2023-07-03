@@ -1,11 +1,11 @@
 export class Proyecto {
 
     id?: number;
-    nombreE: String;
-    descripcionE: String;
+    nombreE: string;
+    descripcionE: string;
     
 
-    constructor(nombreE: String, descripcionE: String) {
+    constructor(nombreE: string, descripcionE: string) {
 
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
