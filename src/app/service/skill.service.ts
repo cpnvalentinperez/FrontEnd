@@ -9,11 +9,19 @@ import { Skill } from '../model/skill';
 })
 export class SkillService {
   
- //URL = 'https://portfolio-backend-rvh4.onrender.com/skill/';
-  
- URL = environment.URL + 'skill/';
+  private URL: string;
 
-  constructor(private httpClient: HttpClient) { }
+ //URL = 'https://portfolio-backend-rvh4.onrender.com/skill/';
+
+ // URL = environment.URL + 'skill/';
+ 
+  constructor(private httpClient: HttpClient) { 
+    
+  if (environment.production){
+      this.URL = environment.URLP + 'skill/'; 
+    }else {
+      {this.URL = environment.URLT + 'skill/';}
+    }}
 
   public lista(): Observable<Skill[]>{
     

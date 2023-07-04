@@ -9,11 +9,20 @@ import { Educacion } from '../model/educacion';
 })
 export class EducacionService {
 
+  private URL: string;
+
   //URL = 'https://portfolio-backend-rvh4.onrender.com/educacion/';
 
-  URL = environment.URL + 'educacion/';
+  //URL = environment.URL + 'educacion/';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { 
+
+    if (environment.production){
+      this.URL = environment.URLP + 'educacion/'; 
+    }else {
+      {this.URL = environment.URLT + 'educacion/';}
+    }}
+  
 
   public lista(): Observable<Educacion[]>{
     

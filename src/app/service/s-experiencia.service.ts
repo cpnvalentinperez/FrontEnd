@@ -9,31 +9,40 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
   
+  private URL: string;
+
  // expURL = 'https://portfolio-backend-rvh4.onrender.com/explab/';
   
-  expURL = environment.URL + 'explab/';
+ // expURL = environment.URL + 'explab/';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { 
+
+    if (environment.production){
+      this.URL = environment.URLP + 'explab/'; 
+    }else {
+      {this.URL = environment.URLT + 'explab/';}
+    }}
+  
 
   public lista(): Observable<Experiencia[]>{
     
-    return this.httpClient.get<Experiencia[]>(this.expURL + 'lista');
+    return this.httpClient.get<Experiencia[]>(this.URL + 'lista');
   }
 
   public detail(id: number): Observable<Experiencia>{
-    return this.httpClient.get<Experiencia>(this.expURL + `detail/${id}`);   
+    return this.httpClient.get<Experiencia>(this.URL + `detail/${id}`);   
   } 
 
   public save(experiencia: Experiencia): Observable<any>{
-    return this.httpClient.post(this.expURL + 'create', experiencia);
+    return this.httpClient.post(this.URL + 'create', experiencia);
   }
 
   public update(id: number, experiencia: Experiencia): Observable<any>{
-    return this.httpClient.put<any>(this.expURL + `update/${id}`, experiencia);
+    return this.httpClient.put<any>(this.URL + `update/${id}`, experiencia);
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
+    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }
 }  
 

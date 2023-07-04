@@ -9,11 +9,20 @@ import { persona } from '../model/persona.model';
 })
 export class PersonaService {
   
+  private URL: string;
+
 //URL = 'https://portfolio-backend-rvh4.onrender.com/personas/';
 
- URL = environment.URL + 'personas/';
+ //URL = environment.URL + 'personas/';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {
+
+    if (environment.production){
+      this.URL = environment.URLP + 'personas/'; 
+    }else {
+      {this.URL = environment.URLT + 'personas/';}
+    }}
+   
 
   // public getPersona(): Observable<persona>{
   //   return this.http.get<persona>(this.URL+ 'traer/perfil');    

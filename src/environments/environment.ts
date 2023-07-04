@@ -9,6 +9,7 @@ export const environment = {
     authDomain: 'frontendvp-b302b.firebaseapp.com',
     messagingSenderId: '969077010632',
   },  
-    production: false,
-    URL: 'http://localhost:8080/'
+    production: true,
+    URLT: 'http://localhost:8080/',
+    URLP: 'https://portfolio-backend-rvh4.onrender.com/'
   };

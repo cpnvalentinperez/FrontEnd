@@ -9,11 +9,19 @@ import { Proyecto } from '../model/proyecto';
 })
 export class ProyectoService {
 
+  private URL: string;
+
  //URL = 'https://portfolio-backend-rvh4.onrender.com/proyecto/';
   
-  URL = environment.URL + 'proyecto/';
+ // URL = environment.URL + 'proyecto/';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { 
+    
+    if (environment.production){
+      this.URL = environment.URLP + 'proyecto/'; 
+    }else {
+      {this.URL = environment.URLT + 'proyecto/';}
+    }}
 
   public lista(): Observable<Proyecto[]>{
     
