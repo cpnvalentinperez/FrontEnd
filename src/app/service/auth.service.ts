@@ -21,7 +21,7 @@ constructor(private httpClient: HttpClient) {
   if (environment.production){
   this.authURL = environment.URLP + 'auth/'; 
 }else {
-  {this.authURL = environment.URLT + 'auth/';}
+  this.authURL = environment.URLT + 'auth/';
 }}
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{

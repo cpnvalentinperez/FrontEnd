@@ -19,9 +19,9 @@ export class SExperienciaService {
 
     if (environment.production){
       this.URL = environment.URLP + 'explab/'; 
-    }else {
+    }else 
       {this.URL = environment.URLT + 'explab/';}
-    }}
+    }
   
 
   public lista(): Observable<Experiencia[]>{

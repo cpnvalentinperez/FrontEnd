@@ -20,7 +20,7 @@ export class EducacionService {
     if (environment.production){
       this.URL = environment.URLP + 'educacion/'; 
     }else {
-      {this.URL = environment.URLT + 'educacion/';}
+      this.URL = environment.URLT + 'educacion/';
     }}
   
 

@@ -19,9 +19,9 @@ export class SkillService {
     
   if (environment.production){
       this.URL = environment.URLP + 'skill/'; 
-    }else {
+    }else 
       {this.URL = environment.URLT + 'skill/';}
-    }}
+    }
 
   public lista(): Observable<Skill[]>{
     

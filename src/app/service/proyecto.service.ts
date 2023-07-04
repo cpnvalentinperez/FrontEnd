@@ -20,7 +20,7 @@ export class ProyectoService {
     if (environment.production){
       this.URL = environment.URLP + 'proyecto/'; 
     }else {
-      {this.URL = environment.URLT + 'proyecto/';}
+      this.URL = environment.URLT + 'proyecto/';
     }}
 
   public lista(): Observable<Proyecto[]>{

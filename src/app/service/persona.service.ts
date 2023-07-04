@@ -20,7 +20,7 @@ export class PersonaService {
     if (environment.production){
       this.URL = environment.URLP + 'personas/'; 
     }else {
-      {this.URL = environment.URLT + 'personas/';}
+      this.URL = environment.URLT + 'personas/';
     }}
    
 
